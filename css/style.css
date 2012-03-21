@@ -179,7 +179,7 @@ body {
 /* cell */
 .cell-pool-cont {
 	width: 885px;
-	padding-top: 15px;
+	padding: 15px 0 95px 0;
 	overflow: hidden;
 }
 
@@ -198,7 +198,7 @@ body {
 
 .cell-pool .check-more {
 	position: absolute;
-	bottom: 0px;
+	bottom: -93px;
 	right: 0px;
 }
 
