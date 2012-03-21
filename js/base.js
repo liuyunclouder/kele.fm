@@ -18,7 +18,7 @@
 		
 		$pool.masonry({
 			itemSelector: '.item',
-			columnWidth: 225,
+			columnWidth: 225
 		});
 		
 		$pool.delegate('.item-link', 'hover', function(){
@@ -29,9 +29,8 @@
 			e.preventDefault();
 			
 			$.get('ajax-items.html', function(data){
-				
 				var $data = $(data);
-				console.log($data);
+
 				$data.imagesLoaded(function(){
 					$pool.append($data).masonry('appended', $data);
 				});
