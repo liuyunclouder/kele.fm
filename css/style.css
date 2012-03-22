@@ -247,6 +247,10 @@ body {
 	padding: 15px;
 }
 
+.cell-pool li .item-box .cate-link:hover {
+	text-decoration: none;
+}
+
 .cell-pool li .item-box .item-type {
 	position: absolute;
 	top: 0px;
@@ -255,8 +259,8 @@ body {
 	line-height: 24px;
 	font-weight: bold;
 	color: #fff;
+	cursor: pointer;
 }
-
 
 .cell-pool li .item-box .t-discount {
 	background-color: #31a69d;
