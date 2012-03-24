@@ -52,7 +52,7 @@
 			//cornerStampSelector: '.check-more'
 		});
 		
-		$pool.delegate('.item-link', 'hover', { cls: 'link-color', slt: 'h2, p' }, toggle_class);
+		$pool.delegate('.item', 'hover', { cls: 'link-color'}, toggle_class);
 		
 		var $pool_alike = $('#J_Pool_alike');
 		$pool_alike.masonry({
@@ -61,7 +61,7 @@
 			cornerStampSelector: '.alike'
 		});
 		
-		$pool_alike.delegate('.item-link', 'hover', { cls: 'link-color', slt: 'h2, p' }, toggle_class);
+		$pool_alike.delegate('.item', 'hover', { cls: 'link-color' }, toggle_class);
 		
 			//漂浮子导航
 		var $J_Fly_nav = $('#J_Fly_nav');
@@ -69,6 +69,15 @@
 			$(this).next().andSelf().toggleClass('c-bdt');
 		});
 		
+		var doc_height = $(document).height() - 600;
+		
+		$(window).scroll(function(){
+			var top_cur = $(window).scrollTop();
+			if(top_cur <= doc_height) {
+				$J_Fly_nav.css('top', top_cur + 74);
+			}
+			
+		});
 		
 			//查看更多潮货
 		
@@ -90,10 +99,90 @@
 		});
 		
 			//cell-news-nav hover效果
-		//var $cell_news_nav = $('.cell-news-nav');
 		$('.cell-news-nav').delegate('a', 'hover', { cls:'hover' }, toggle_class);
 		
+			//cell-share-board hover效果
+		$('.cell-share-board').delegate('a', 'hover', { cls: 'hover' }, toggle_class);
 		
+		
+			//cell-slider
+		var $cell_slider = $('#J_Slider'),
+			$big_cont = $('.big-cont', $cell_slider),
+			$thumb_cont = $('.thumb-cont', $cell_slider),
+			num_t = $('img', $thumb_cont).length,
+			w_img = 630;
+		
+		$cell_slider.delegate('.btn-slide', 'click', function(e){
+			var $this = $(this),
+				i_before = $thumb_cont.find('.cur').index(),
+				i_now,
+				step;
+			e.preventDefault();
+			
+			if($this.hasClass('prev')) {
+				
+				//$thumb_cont.find('.cur').removeClass('cur').prev().addClass('cur');
+				i_now = i_before - 1;
+				
+				//console.log(i_now);
+				//console.log(i_before);
+				
+				go_slide(-1);
+				
+			}else if($this.hasClass('next')) {
+			
+				//$thumb_cont.find('.cur').removeClass('cur').next().addClass('cur');
+				i_now = i_before + 1;
+				
+				//console.log(i_now);
+				//console.log(i_before);
+				
+				go_slide(1);
+				
+			}else {
+			
+				i_now = $this.parent().index();
+				step = i_now - i_before - 0;
+				
+				//console.log(i_now);
+				//console.log(i_before);
+				
+				go_slide(step);
+				
+			}
+			
+			if(i_now == 0) {
+				$cell_slider.find('.prev').addClass('prev-disable');
+			}else if(i_now == num_t-1) {
+				$cell_slider.find('.next').addClass('next-disable');
+			}else {
+				$cell_slider.find('.btn-cont a').removeClass('prev-disable next-disable');
+			}
+			
+			$thumb_cont.find('li').removeClass('cur');
+			$thumb_cont.find('li').eq(i_now).addClass('cur');
+			
+			//$cell_slider.data('idx', i);
+			
+			function go_slide(step){
+				
+				if((i_before + step) >= num_t || (i_before + step) < 0) {
+					i_now = i_before;
+					return;
+				};
+				
+				var amount = -(w_img * step),
+					l_cur = Number($big_cont.css('left').slice(0, -2));
+				
+				//console.log(typeof l_cur);
+				//console.log(l_cur);
+				
+				$big_cont.css('left', amount + l_cur);
+				
+			};
+			
+			
+		});
 		
 	});
 	
