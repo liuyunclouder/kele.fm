@@ -177,7 +177,9 @@
 				//console.log(typeof l_cur);
 				//console.log(l_cur);
 				
-				$big_cont.css('left', amount + l_cur);
+				$big_cont.animate({
+					'left': '+=' + amount
+				}, 'slow');
 				
 			};
 			

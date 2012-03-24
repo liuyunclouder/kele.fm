@@ -719,8 +719,8 @@ body {
 
 .cell-slider .thumb-cont  li img {
 	zoom: 1; 
-	filter: alpha(opacity=90); 
-	opacity: 0.9;
+	filter: alpha(opacity=60); 
+	opacity: 0.6;
 }
 
 .cell-slider .thumb-cont  li.cur img{
