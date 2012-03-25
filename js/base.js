@@ -121,21 +121,13 @@
 			
 			if($this.hasClass('prev')) {
 				
-				//$thumb_cont.find('.cur').removeClass('cur').prev().addClass('cur');
 				i_now = i_before - 1;
-				
-				//console.log(i_now);
-				//console.log(i_before);
 				
 				go_slide(-1);
 				
 			}else if($this.hasClass('next')) {
 			
-				//$thumb_cont.find('.cur').removeClass('cur').next().addClass('cur');
 				i_now = i_before + 1;
-				
-				//console.log(i_now);
-				//console.log(i_before);
 				
 				go_slide(1);
 				
@@ -144,25 +136,21 @@
 				i_now = $this.parent().index();
 				step = i_now - i_before - 0;
 				
-				//console.log(i_now);
-				//console.log(i_before);
-				
 				go_slide(step);
 				
 			}
+			
+			$cell_slider.find('.btn-cont a').removeClass('prev-disable next-disable');
 			
 			if(i_now == 0) {
 				$cell_slider.find('.prev').addClass('prev-disable');
 			}else if(i_now == num_t-1) {
 				$cell_slider.find('.next').addClass('next-disable');
-			}else {
-				$cell_slider.find('.btn-cont a').removeClass('prev-disable next-disable');
 			}
+
 			
-			$thumb_cont.find('li').removeClass('cur');
-			$thumb_cont.find('li').eq(i_now).addClass('cur');
+			var re = $thumb_cont.find('li').removeClass('cur').eq(i_now).addClass('cur');
 			
-			//$cell_slider.data('idx', i);
 			
 			function go_slide(step){
 				
@@ -173,9 +161,7 @@
 				
 				var amount = -(w_img * step),
 					l_cur = Number($big_cont.css('left').slice(0, -2));
-				
-				//console.log(typeof l_cur);
-				//console.log(l_cur);
+
 				
 				$big_cont.animate({
 					'left': '+=' + amount
