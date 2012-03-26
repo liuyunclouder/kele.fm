@@ -1230,8 +1230,42 @@ body {
 	_left: -15px;
 }
 	
+	/* cell-another-board */
+.cell-another-board {
+	display: none;
+	position: absolute;
+	z-index: 99;
+	top: 1200px;
+	left: 600px;
+	width: 461px;
+	border-top: 3px solid #ee3c24;
+	color: #333;
+	font-family: 'microsoft yahei';
+	background-color: #FFF;
+}
 	
-	
-	
+.cell-another-board li {
+	float: left;
+	padding: 10px 0;
+	background: url('../img/icon.gif') no-repeat;
+}
+
+.cell-another-board li.left {
+	width: 200px;
+	padding-left: 30px;
+	border-right: 1px solid #dbdbdb;
+	background-position: 6px -450px;
+}
+
+.cell-another-board li.right {
+	width: 200px;
+	padding-right: 30px;
+	text-align: right;
+	background-position: 207px -492px;
+}
+
+.cell-another-board li a {
+	color: #ee3c24;
+}	
 	
 	

@@ -71,17 +71,27 @@
 		
 		var doc_height = $(document).height() - 600;
 		
+		var $J_Another = $('#J_Another');
+		
 		$(window).scroll(function(){
 			var top_cur = $(window).scrollTop();
+			
+			//console.log(top_cur);
 			if(top_cur <= doc_height) {
 				$J_Fly_nav.css('top', top_cur + 74);
+			}
+			if(top_cur > 1200) {
+				$J_Another.show().css('top', top_cur + 80);
+				
+			}else if(top_cur < 1200) {
+				$J_Another.hide().css('top', 1200);
 			}
 			
 		});
 		
-			//查看更多潮货
 		
-		$(document.getElementById('J_Check_more')).click(function(e){
+		//查看更多潮货
+		$('#J_Check_more').click(function(e){
 			e.preventDefault();
 			
 			if($(e.target).parents('.check-more').length == 0) {
@@ -98,6 +108,7 @@
 			
 		});
 		
+		
 			//cell-news-nav hover效果
 		$('.cell-news-nav').delegate('a', 'hover', { cls:'hover' }, toggle_class);
 		
@@ -105,7 +116,7 @@
 		$('.cell-share-board').delegate('a', 'hover', { cls: 'hover' }, toggle_class);
 		
 		
-			//cell-slider
+		//cell-slider
 		var $cell_slider = $('#J_Slider'),
 			$big_cont = $('.big-cont', $cell_slider),
 			$thumb_cont = $('.thumb-cont', $cell_slider),
@@ -171,6 +182,9 @@
 			
 			
 		});
+		
+		
+		
 		
 	});
 	
