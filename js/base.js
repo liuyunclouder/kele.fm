@@ -73,18 +73,26 @@
 		
 		var $J_Another = $('#J_Another');
 		
+		var fg, clientH = document.documentElement.clientHeight;
+		
 		$(window).scroll(function(){
 			var top_cur = $(window).scrollTop();
+			
 			if(top_cur <= doc_height) {
 				$J_Fly_nav.css('top', top_cur + 74);
 			}
 			if(top_cur > 1200) {
-				$J_Another.show().css('top', top_cur + 80);
-
-			}else if(top_cur < 1200) {
-				$J_Another.hide().css('top', 1200);
+				fg = true;
 			}
 			
+			if(fg){
+				$J_Another.css('top', top_cur + clientH -60).show(function(){
+					if($(this).css('right') == 0) return ;
+					$(this).animate({
+						'right': 0
+					}, 'slow');
+				});
+			}
 		});
 		
 			//查看更多潮货

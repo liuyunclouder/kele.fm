@@ -67,6 +67,8 @@ a:hover {
 
 body {
 	background: #0f0f11 url('../img/bg_body.jpg') center top no-repeat;
+	position: relative;
+	zoom: 1;
 }
 
 .wrap {
@@ -1235,8 +1237,7 @@ body {
 	display: none;
 	position: absolute;
 	z-index: 99;
-	top: 1200px;
-	left: 600px;
+	right: -400px;
 	width: 461px;
 	border-top: 3px solid #ee3c24;
 	color: #333;
