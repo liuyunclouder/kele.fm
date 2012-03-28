@@ -86,14 +86,19 @@
 			}
 			
 			if(fg){
-				$J_Another.css('top', top_cur + clientH -60).show(function(){
+				$J_Another.show(function(){
 					if($(this).css('right') == 0) return ;
 					$(this).animate({
 						'right': 0
-					}, 'slow');
+					}, 'fast');
 				});
+				if ( $.browser.msie && $.browser.version < 7 ) {
+					$J_Another.css('top', top_cur + clientH - 86);
+				}
 			}
 		});
+		
+		
 		
 			//查看更多潮货
 		

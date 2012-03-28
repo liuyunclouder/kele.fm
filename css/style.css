@@ -116,6 +116,7 @@ body {
 	display: block;
 	width: 70px;
 	height: 70px;
+	border-left: 1px solid #282828;
 	color: #fff;
 	font-size: 16px;
 	line-height: 70px;
@@ -264,9 +265,13 @@ body {
 .mod-side {
 	position: absolute;
 	width: 225px;
-	padding-top: 35px;
+	padding-top: 17px;
 	margin-left: -10px;
 	zoom: 1;
+}
+
+.mod-side-discount-detail {
+	padding-top: 35px;
 }
 
 .mod-side .col-narrow {
@@ -438,7 +443,6 @@ body {
 	display: block;
 	padding: 2px 4px;
 	font-size: 12px;
-	font-weight: bold;
 	color: #333;
 }
 
@@ -461,7 +465,7 @@ body {
 .cell-fly-nav li a {
 	display: block;
 	height: 30px;
-	padding-left: 40px;
+	padding-left: 35px;
 	border-top: 1px solid #e2e2e2;
 	line-height: 30px;
 	font-size: 14px;
@@ -476,107 +480,107 @@ body {
 }
 
 .cell-fly-nav li .link-1 {
-	background-position: -110px 12px;
+	background-position: -114px 12px;
 }
 
 .cell-fly-nav li .link-1:hover {
-	background-position: 0px 12px;
+	background-position: -4px 12px;
 }
 
 .cell-fly-nav li .link-2 {
-	background-position: -110px -24px;
+	background-position: -114px -24px;
 }
 
 .cell-fly-nav li .link-2:hover {
-	background-position: 0px -24px;
+	background-position: -4px -24px;
 }
 
 .cell-fly-nav li .link-3 {
-	background-position: -110px -52px;
+	background-position: -114px -53px;
 }
 
 .cell-fly-nav li .link-3:hover {
-	background-position: 0px -52px;
+	background-position: -4px -53px;
 }
 
 .cell-fly-nav li .link-4 {
-	background-position: -110px -82px;
+	background-position: -114px -82px;
 }
 
 .cell-fly-nav li .link-4:hover {
-	background-position: 0px -82px;
+	background-position: -4px -82px;
 }
 
 .cell-fly-nav li .link-5 {
-	background-position: -110px -112px;
+	background-position: -114px -112px;
 }
 
 .cell-fly-nav li .link-5:hover {
-	background-position: 0px -112px;
+	background-position: -4px -112px;
 }
 
 .cell-fly-nav li .link-6 {
-	background-position: -110px -142px;
+	background-position: -114px -144px;
 }
 
 .cell-fly-nav li .link-6:hover {
-	background-position: 0px -142px;
+	background-position: -4px -144px;
 }
 
 .cell-fly-nav li .link-7 {
-	background-position: -110px -172px;
+	background-position: -114px -172px;
 }
 
 .cell-fly-nav li .link-7:hover {
-	background-position: 0px -172px;
+	background-position: -4px -172px;
 }
 
 .cell-fly-nav li .link-8 {
-	background-position: -110px -202px;
+	background-position: -114px -204px;
 }
 
 .cell-fly-nav li .link-8:hover {
-	background-position: 0px -202px;
+	background-position: -4px -204px;
 }
 
 .cell-fly-nav li .link-9 {
-	background-position: -110px -235px;
+	background-position: -114px -235px;
 }
 
 .cell-fly-nav li .link-9:hover {
-	background-position: 0px -235px;
+	background-position: -4px -235px;
 }
 
 .cell-fly-nav li .link-10 {
-	background-position: -110px -265px;
+	background-position: -114px -265px;
 }
 
 .cell-fly-nav li .link-10:hover {
-	background-position: 0px -265px;
+	background-position: -4px -265px;
 }
 
 .cell-fly-nav li .link-11 {
-	background-position: -110px -297px;
+	background-position: -114px -297px;
 }
 
 .cell-fly-nav li .link-11:hover {
-	background-position: 0px -297px;
+	background-position: -4px -297px;
 }
 
 .cell-fly-nav li .link-12 {
-	background-position: -110px -326px;
+	background-position: -114px -326px;
 }
 
 .cell-fly-nav li .link-12:hover {
-	background-position: 0px -326px;
+	background-position: -4px -326px;
 }
 
 .cell-fly-nav li .link-13 {
-	background-position: -110px -355px;
+	background-position: -114px -355px;
 }
 
 .cell-fly-nav li .link-13:hover {
-	background-position: 0px -355px;
+	background-position: -4px -355px;
 }
 
 .cell-fly-nav li a:hover, .cell-fly-nav li a.cur {
@@ -653,38 +657,37 @@ body {
 }
 
 .cell-crumb a {
-	color: #666;
+	display: inline-block;
+	color: #333;
 	vertical-align: middle;
-	_vertical-align: -10px;
 }
 
 .cell-crumb span {
+	color: #666;
 	vertical-align: middle;
-	_vertical-align: -10px;
 }
 
 .cell-crumb .crumb-arrow {
 	display: inline-block;
-	width: 0px;
-	height: 0px;
-	border-bottom: 6px solid transparent;
-	border-left: 6px solid #ccc;
-	border-top: 6px solid transparent;
-	_border-color: #e8e8e8;
+	width: 10px;
+	height: 10px;
 	margin: 0 5px;
-	line-height: 0px;
-	font-size: 0px;
-	text-indent: -9999px;
+	_vertical-align: -2px;
+	background: url('../img/icon.gif') -56px -558px no-repeat;
+	
 }
 
 	/* cell-title */
 .cell-title {
 	height: 24px;
+	line-height: 24px;
+}
+
+.cell-title a {
 	color: #333;
 	font-size: 20px;
 	font-weight: bold;
 	font-family: 'microsoft yahei';
-	line-height: 24px;
 }
 
 	/* cell-slider */
@@ -1122,10 +1125,10 @@ body {
 
 .cell-news-nav li a {
 	display: block;
-	height: 24px;
+	height: 30px;
 	border-top: 1px solid #f0f0f0;
 	font-size: 14px;
-	line-height: 24px;
+	line-height:30px;
 	color: #333;
 }
 
@@ -1165,6 +1168,7 @@ body {
 	padding-left: 24px;
 	color: #333;
 	font-weight: bold;
+	background: url('../img/icon-fly-nav.png') -124px -31px no-repeat;
 }
 
 .cell-hot-wave dt {
@@ -1235,11 +1239,14 @@ body {
 	/* cell-another-board */
 .cell-another-board {
 	display: none;
-	position: absolute;
+	position: fixed;
+	_position: absolute;
 	z-index: 99;
+	bottom: 30px;
 	right: -400px;
 	width: 461px;
 	border-top: 3px solid #ee3c24;
+	box-shadow: 1px 1px 2px #666;
 	color: #333;
 	font-family: 'microsoft yahei';
 	background-color: #FFF;
