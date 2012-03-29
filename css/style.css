@@ -57,7 +57,7 @@ table {
 }
 
 a {
-	color: #179fcd;
+	color: #ee3c24;
 	text-decoration: none;
 }
 
@@ -1254,26 +1254,45 @@ body {
 	
 .cell-another-board li {
 	float: left;
+}
+
+.cell-another-board li a {
+	display: block;
 	padding: 10px 0;
+	color: #ee3c24;
 	background: url('../img/icon.gif') no-repeat;
 }
 
-.cell-another-board li.left {
+.cell-another-board li a p {
+	color: #333;
+}
+
+.cell-another-board li.left a {
 	width: 200px;
 	padding-left: 30px;
 	border-right: 1px solid #dbdbdb;
 	background-position: 6px -450px;
 }
 
-.cell-another-board li.right {
+.cell-another-board li.left a:hover {
+	background-position: 6px -575px;
+}
+
+.cell-another-board li.right a {
 	width: 200px;
 	padding-right: 30px;
 	text-align: right;
-	background-position: 207px -492px;
+	background-position: 207px -494px;
 }
 
-.cell-another-board li a {
+.cell-another-board li.right a:hover {
+	background-position: 207px -534px;
+}
+
+.cell-another-board li.left a:hover p, .cell-another-board li.right a:hover p {
 	color: #ee3c24;
-}	
+}
+
+
 	
 	
