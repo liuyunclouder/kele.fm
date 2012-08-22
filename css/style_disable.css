@@ -44,7 +44,9 @@ table {
 }
 
 /* reset */
-
+strong {
+	
+}
 
 body{ 
 	background:#0f0f11 url(../img/bg_body.jpg) no-repeat top center;
